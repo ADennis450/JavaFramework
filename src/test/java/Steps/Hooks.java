@@ -36,16 +36,16 @@ public class Hooks {
         if (browser.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--test-type");
+            options.addArguments("--test-type --illegal-access=warn");
             driver = new ChromeDriver(options);
 
         } else if (browser.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\SeleniumFramework\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "C:\\SeleniumDrivers\\geckodriver.exe");
             FirefoxOptions options = new FirefoxOptions();
             driver = new FirefoxDriver();
         } else if (browser.equals("phantomjs")) {
             DesiredCapabilities caps = new DesiredCapabilities();
-            caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "C:\\SeleniumFramework\\phantomjs.exe");
+            caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "C:\\SeleniumDrivers\\phantomjs.exe");
             driver = new PhantomJSDriver(caps);
         }
 

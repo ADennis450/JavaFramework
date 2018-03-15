@@ -3,6 +3,7 @@ package Steps;
 import PageObjects.GoogleSearchPage;
 import static org.junit.Assert.*;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -54,4 +55,8 @@ public class MyStepdefs{
     }
 
 
+    @Given("^I click on the text \"([^\"]*)\"$")
+    public void iClickOnTheText(String text) {
+        google.clickOnText(text);
+    }
 }

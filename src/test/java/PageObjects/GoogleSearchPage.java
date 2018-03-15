@@ -20,6 +20,9 @@ public class GoogleSearchPage extends BaseClass {
     @FindBy(how = How.ID, using="lst-ib")
     public static WebElement search;
 
+    public void clickOnText(String value){
+        driver.findElement(By.name(value)).click();
+    }
 
     public void searchFor(String value)
     {
