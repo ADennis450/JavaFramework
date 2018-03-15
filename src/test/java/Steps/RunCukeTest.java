@@ -1,4 +1,5 @@
-package Reports;
+package Steps;
+import Steps.MyStepdefs;
 
 /**
  * Created by adennis on 3/13/2018.
@@ -8,8 +9,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:Features",
-        glue = "MyStepdefs",
+        strict = true,
+        features = {"classpath:Features"},
         plugin = {"pretty", "html:target/cucumber-html-report"}
         )
 public class RunCukeTest {

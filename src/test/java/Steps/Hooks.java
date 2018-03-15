@@ -1,6 +1,5 @@
 package Steps;
 
-import com.sun.org.apache.xpath.internal.operations.String;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -35,7 +34,7 @@ public class Hooks {
             }
         }
         if (browser.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\SeleniumFramework\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--test-type");
             driver = new ChromeDriver(options);

@@ -1,3 +1,4 @@
+@run
 Feature: NavigateToGoogle
 
   Scenario: Navigate To Google
