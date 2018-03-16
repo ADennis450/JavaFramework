@@ -54,9 +54,13 @@ public class MyStepdefs{
         assertEquals(expectedTitle,title);
     }
 
+    @And("^I wait (\\d+) seconds$")
+    public void iWaitSeconds(int arg0) throws Throwable {
+        Thread.sleep(arg0);
+    }
 
-    @Given("^I click on the text \"([^\"]*)\"$")
-    public void iClickOnTheText(String text) {
-        google.clickOnText(text);
+    @Given("^I do a sogeti search for \"([^\"]*)\"$")
+    public void iDoASogetiSearchFor(String value) throws Throwable {
+        google.SogetiSearch(value);
     }
 }
