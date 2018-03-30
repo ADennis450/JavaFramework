@@ -24,7 +24,7 @@ public class MyStepdefs{
       PageFactory.initElements(driver, GoogleSearchPage.class);
     }
 
-    @Given("^Navigate to \"([^\"]*)\"$")
+    @Given("^I navigate to \"([^\"]*)\"$")
     public void navigateTo(String url){
       driver.navigate().to(url);
     }
