@@ -42,6 +42,7 @@ public class Hooks {
         } else if (browser.equals("firefox")) {
             System.setProperty("webdriver.gecko.driver", "C:\\SeleniumDrivers\\geckodriver.exe");
             FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--test-type");
             driver = new FirefoxDriver();
         } else if (browser.equals("phantomjs")) {
             DesiredCapabilities caps = new DesiredCapabilities();
