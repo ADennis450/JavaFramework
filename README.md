@@ -1,6 +1,6 @@
 # JavaFramework
 
-This is a basic Java Selenium-Cucumber framework I created for fun
+This is a basic Java Selenium-Cucumber front-end test automation framework I created for fun
 
 Quick set up instructions
 
